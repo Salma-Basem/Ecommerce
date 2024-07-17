@@ -41,12 +41,6 @@
     "typescript": "~5.1.3"
   }
   
-,
-"budgets": [
-{
-  "type": "initial",
-  "maximumWarning": "4kb",
-  "maximumError": "5kb" 
-}
-]
+
+
 }
