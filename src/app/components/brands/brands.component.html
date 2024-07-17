@@ -1,0 +1,8 @@
+<app-loading></app-loading>
+<div class="p-2  row mt-5 ">
+    <h3 class="fw-bold text-main text-center">All Brands</h3>
+    <div *ngFor="let currentBrand of allBrands" class="col-md-4 col-sm-2  my-3    ">
+       <app-all-brands  [brand]="currentBrand"></app-all-brands>      
+        
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" routerLink="home"><img src="assets/images/images/freshcart-logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="home">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="wishlist">Wishlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="categories">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="brands">Brands</a>
+          </li>
+        </ul>
+        
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item m-2">
+             <i class="fa fa-brands fa-instagram me-2"></i>
+             <i class="fa fa-brands fa-facebook me-2"></i>
+             <i class="fa fa-brands fa-tiktok me-2"></i>
+             <i class="fa fa-brands fa-twitter me-2"></i>
+             <i class="fa fa-brands fa-linkedin me-2"></i>
+             <i class="fa fa-brands fa-youtube me-2"></i>
+            </li>
+            <li class="nav-item">
+              <a *ngIf="!isLoggedUser" class="nav-link" routerLink="login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a *ngIf="!isLoggedUser" class="nav-link" routerLink="register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="signOut" (click)="logout()">Sign Out</a>
+            </li>
+            <li class="nav-item" class="nav-iten cursor-pointer ">
+              <a class="nav-link position-relative" routerLink="/cart"><i class="fas fa-shopping-cart text-main"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main mt-1">
+                 {{cartItemsNum}}
+                 
+                </span></a>
+            </li>
+
+            <li class="nav-item" class="nav-iten cursor-pointer ms-2">
+              <a class="nav-link position-relative" routerLink="/wishlist"><i class="fas fa-heart text-danger"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-1">
+                 {{wishlistCount}}
+                 
+                </span></a>
+            </li>
+           
+          </ul>
+      </div>
+    </div>
+  </nav>

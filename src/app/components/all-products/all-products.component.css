@@ -1,0 +1,13 @@
+@import 'ngx-toastr/toastr';
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .red-heart path {
+    fill: red;
+  }
+
+  

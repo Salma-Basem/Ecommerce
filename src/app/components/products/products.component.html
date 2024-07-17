@@ -1,0 +1,9 @@
+<app-loading></app-loading>
+<div class="row mt-5">
+    <h3 class="fw-bold">Popular Items this season </h3>
+    <div *ngFor="let currentProduct of allProducts" class="col-md-2 col-sm-3-6  my-3 product">
+       <app-all-products [product]="currentProduct"></app-all-products>
+       
+    </div>
+    
+</div>

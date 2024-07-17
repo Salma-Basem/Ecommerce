@@ -1,0 +1,14 @@
+
+<div class="row mt-5" *ngIf="allProducts.length; else none">
+    
+    <div *ngFor="let currentProduct of allProducts" class="col-md-3 col-sm-6   my-3 product">
+       <app-all-products [product]="currentProduct"></app-all-products>
+        
+    </div>
+</div>
+
+<ng-template #none>
+    <p class="fw-bold my-3 text-center">No Available Products For this Category</p>
+</ng-template>
+
+<app-loading *ngIf="isLoading"></app-loading>

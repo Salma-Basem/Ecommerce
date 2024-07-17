@@ -1,0 +1,26 @@
+<div class="container mt-5 w-75">
+    <div>
+        <form  (ngSubmit)="handleCash(shippingAddressForm)" [formGroup]="shippingAddressForm">
+            <label for="details" class="mb-2">Details:</label>
+            <input type="text" id="details" formControlName="details" class="form-control mb-2">
+        
+            <label for="phone" class="mb-2">Phone:</label>
+            <input type="text" id="phone" formControlName="phone" class="form-control mb-2">
+        
+            <label for="city" class="mb-2">City:</label>
+            <input type="text" id="city" formControlName="city" class="form-control mb-2">
+
+           
+           
+           
+            <button class="d-block btn bg-main text-white mt-3 me-3 ms-auto" (click)="handleCash(shippingAddressForm)">Cash Payment <i class="fa-solid fa-wallet"></i></button>
+            
+           
+     
+           
+              
+           
+        </form>
+    </div>
+
+</div>

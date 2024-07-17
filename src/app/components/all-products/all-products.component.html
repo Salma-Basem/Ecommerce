@@ -1,0 +1,30 @@
+
+<app-loading></app-loading>
+   <div class=" p-2">
+    <i class="cursor-pointer  fa-heart fs-4 " [class]="isWishlistProduct(product._id) ? 'fas text-danger':'fa-regular'" (click)="getProductsIntoWishList(product._id)"></i>
+        <a [routerLink]="['/product',product._id]">
+            
+        <img [src]= "product.imageCover" alt="product.title" class="w-100">
+        <h6 class="fw-bolder  text-center mt-2 ">{{product.title|addTitle:2}}</h6>
+   
+    <div class="d-flex justify-content-between ">
+        <span class="fw-bold font-sm">{{product.price|addEGP}} </span>
+        <div>
+            <i class="fa fa-star rating-color me-2"></i>
+        <span class="fw-bold">{{product.ratingsAverage}}</span>
+        </div>
+       
+        </div>
+    </a>
+    </div>
+    <div>
+       
+        <!-- <button (click)="toggleColor(); getProductsIntoWishList(product._id); showSuccessWishlist() " [ngClass]="{'red-heart': isRed}" >
+            <svg viewBox="0 0 512 512" width="24" height="24">
+              <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+            </svg>
+          </button> -->
+    </div>
+ 
+    <button class="my-2 bg-main p-1 px-2  btn btn-rounded text-white ms-3" (click)=" getProductsIntoCart(product._id); ">+ Add to Cart <i class="fa fa-cart-shopping"></i></button>
+    

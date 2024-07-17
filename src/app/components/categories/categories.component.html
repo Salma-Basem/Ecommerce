@@ -1,0 +1,9 @@
+<app-loading></app-loading>
+<div class="row mt-5">
+    <h3 class="fw-bold text-center text-main">All Categories </h3>
+    <div *ngFor="let currentCategory of allCategories" class="col-md-4 col-sm-2  my-3 ">
+    
+        <app-allcategories [category]="currentCategory"></app-allcategories>
+        
+    </div>
+</div>

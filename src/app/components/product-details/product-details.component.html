@@ -1,0 +1,38 @@
+<app-loading></app-loading>
+<div class="row align-items-center">
+    <div class="col-md-4 ">
+        <div class="p-5 border">
+            <owl-carousel-o [options]="customOptions">
+
+                <ng-container *ngFor="let product of productDetails?.images">
+                  <ng-template carouselSlide >
+                    <img [src]="product" alt="productDetails?.title" class="w-100  border-light border-3 border ">
+                  </ng-template>
+                </ng-container>
+            
+              </owl-carousel-o>
+        </div>
+       
+      
+    </div>
+    <div class="col-md-8  ">
+        <h3 class="fw-bold">{{productDetails?.title}}</h3>
+        <p class="fw-bold">{{productDetails?.description}}</p>
+        <span class="text-main fw-bold mb-3">{{productDetails?.category?.name}}</span>
+        <div class="mt-2">
+            <h6 class=" font-sm"><span class="fw-bolder">Available Quantity: </span> {{productDetails?.quantity}} pieces</h6>
+            <div class="d-flex justify-content-between">
+                <h6 class=" font-sm"><span class="fw-bolder">Price: </span>{{productDetails?.price}} $</h6>
+                <div class="w-50">
+                    <i class="fa fa-star rating-color me-2"></i>
+                    <span class="fw-bold">{{productDetails?.ratingsAverage}}</span>
+                </div>
+            </div>
+           <div class="d-flex justify-content-between align-items-center">
+            <button class="my-2 bg-main p-1 px-2  btn btn-rounded text-white ms-3 flex-grow-1" (click)="getProductsIntoCart(productDetails?._id)">+ Add to Cart <i class="fa fa-cart-shopping"></i></button>
+            <button class="my-2 bg-danger p-1 px-2  btn btn-rounded text-white ms-3 flex-grow-1 " >+ Add to Wishlist <i class="fas fa-heart "></i></button>
+           </div>
+            
+        </div>
+    </div>
+</div>

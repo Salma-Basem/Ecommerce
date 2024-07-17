@@ -1,0 +1,13 @@
+
+
+<app-home-main-slider></app-home-main-slider>
+<app-home-category-slider></app-home-category-slider>
+<input [(ngModel)]="searchTerm" type="text" class="form-control my-4 p-2" placeholder="Search by Product Name" >
+<div class="row mt-5">
+    <h3 class="fw-bold">Popular Items this season </h3>
+    <div *ngFor="let currentProduct of allProducts|search:searchTerm " class="col-md-2 col-sm-3-6  my-3 product">
+       <app-all-products [product]="currentProduct"></app-all-products>
+        
+    </div>
+</div>
+<app-loading *ngIf="isLoading"></app-loading>

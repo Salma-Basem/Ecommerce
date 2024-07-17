@@ -1,0 +1,54 @@
+  
+ <div class="container bg-main-light mt-5 ">
+    <div class="row align-items-center p-5">
+        <h3 class="fw-bold p-2 mt-3 ms-3">My Wishlist</h3>
+        
+        <div class="row p-2 border-bottom pb-3" *ngFor="let product of myWishList let i = index">
+              <div class="col-md-1">
+                <img [src]="product.imageCover" alt="{{ product.title }}" class="w-100">
+                </div>
+                <div class="col-md-11 d-flex justify-content-between">
+                    <div>
+                 <p class="fw-bold">{{ product.title }}</p>
+                 <p class="text-main fw-bold">Price:{{ product.price  |addEGP}}</p>
+                    <button class="btn m-0 p-0 " (click)="removeItemFromWishlist(product._id)">
+                        <i class="fa-solid fa-trash text-danger me-3 p-1" ></i>
+                        <span class="text-danger">Remove</span>
+                    </button>
+              </div>
+              <div>
+                <button class="btn btn-outline-success" (click)=" getProductsIntoCart(product._id); ">Add to cart</button>
+              </div>
+            </div>
+            
+            
+          </div>
+
+     
+    </div>
+</div> 
+<app-loading *ngIf="isLoading"></app-loading>
+<!-- <div class="container bg-main-light mt-5 ">
+    <div class="row align-items-center p-2">
+        <h3 class="fw-bold p-2 mt-3 ms-3">Shop Cart</h3>
+        
+        <div class="row p-2 border-bottom pb-3" >
+            <div class="col-md-1">
+                <img [src]="myWishList?.imageCover" alt="" class="w-100">
+            </div>
+            <div class="col-md-11 d-flex justify-content-between">
+                <div>
+                    <p class="fw-bold">{{myWishList.title}}</p>
+                    <p class="text-main fw-bold">Price:{{myWishList.price |addEGP}}</p>
+                    <button class="btn m-0 p-0" (click)="removeItemFromCart(myWishList._id)">
+                        <i class="fa-solid fa-trash text-main me-3" ></i>
+                        <span>Remove</span>
+                    </button>
+                </div>
+              
+                
+            </div>
+        </div>
+       
+    </div>
+</div> -->
